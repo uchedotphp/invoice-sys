@@ -1,0 +1,107 @@
+/* Import League Spartan from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "./colors.css";
+@import "./typography.css";
+
+@theme {
+  --font-league: "League Spartan", "system-ui", "sans-serif";
+}
+
+@layer base {
+
+  html,
+  body {
+    @apply w-full h-full overflow-x-hidden font-league;
+    font-size: var(--text-ground);
+    line-height: 1;
+  }
+
+  #root {
+    height: 100%;
+  }
+
+  ::selection {
+    @apply bg-primary/20;
+  }
+
+  h1 {
+    @apply text-medium lg:text-large;
+    font-size: var(--text-large);
+    line-height: calc(var(--text-large) * 1);
+  }
+
+  h2 {
+    font-size: var(--text-medium);
+    line-height: calc(var(--text-medium) * 1);
+  }
+
+  h3 {
+    font-size: var(--text-ground);
+    line-height: calc(var(--text-medium) * 1);
+  }
+
+  h3.label {
+    font-size: var(--text-ground);
+    line-height: 15px;
+  }
+
+  /* h6 {
+    font-size: 13px;
+    line-height: 18px;
+  } */
+
+  p.description {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply pt-3.5 pl-[18px] pb-[11px] pr-[19px] inline-flex items-center justify-center rounded-md font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn--flat {
+    @apply bg-transparent p-0 rounded-none h-fit;
+  }
+
+  .btn--primary {
+    @apply text-white bg-primary;
+  }
+
+  .btn--rounded {
+    @apply rounded-full;
+  }
+
+  /* .btn-primary {
+      @apply bg-primary-600 hover:bg-primary-700 text-white;
+    } */
+
+  /* .btn-secondary {
+    @apply btn bg-secondary-600 hover:bg-secondary-700 text-white;
+  } */
+
+  /* .btn-secondary {
+      @apply bg-secondary-600 hover:bg-secondary-700 text-white;
+    } */
+
+  /* .btn-outline {
+    @apply btn border border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800;
+  } */
+
+  /* .btn-outline {
+      @apply border border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800;
+    } */
+
+  /* .card {
+    @apply rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900;
+  } */
+
+  /* .input {
+    @apply flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm 
+           placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 
+           disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700;
+  } */
+}
