@@ -4,7 +4,7 @@ import { BiSolidMoon } from "react-icons/bi";
 import { WiStars } from "react-icons/wi";
 import { HiOutlineUser } from "react-icons/hi2";
 import { Button } from "./ui/Button";
-import Logo from "./ui/Logo";
+import Logo from "./ui/Logo.tsx";
 import { ReactNode } from "react";
 
 interface SidebarMenuProps {
@@ -27,7 +27,7 @@ export const Sidebar = () => {
         <Logo />
       </div>
       <section className="flex lg:flex-col items-center lg:space-y-8">
-        <ul className="flex mr-6 lg:mr-0 lg:flex-col items-center space-x-12 lg:space-x-0 lg:space-y-12">
+        <ul className="flex mr-6 lg:mr-0 lg:flex-col items-center space-x-4 lg:space-x-0 lg:space-y-12">
           <li>
             <SidebarMenu>
               <BiSolidMoon size={iconSizes} />
