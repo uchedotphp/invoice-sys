@@ -2,10 +2,10 @@ import Avatar from "./ui/Avatar";
 import { TbSettings } from "react-icons/tb";
 import { BiSolidMoon } from "react-icons/bi";
 import { WiStars } from "react-icons/wi";
+import { HiOutlineUser } from "react-icons/hi2";
 import { Button } from "./ui/Button";
 import Logo from "./ui/Logo";
 import { ReactNode } from "react";
-
 
 interface SidebarMenuProps {
   children: ReactNode;
@@ -46,7 +46,9 @@ export const Sidebar = () => {
         </ul>
         <section className="h-full w-full px-6 lg:px-0 border-l-[1px] border-[#494E6E] lg:border-l-0 lg:border-t-[1px] lg:py-6 lg:h-[88px] lg:my-auto flex justify-center items-center">
           <Button className="btn btn-flat">
-            <Avatar />
+            <Avatar className="bg-white h-10 w-10">
+              <HiOutlineUser size={iconSizes} />
+            </Avatar>
           </Button>
         </section>
       </section>
