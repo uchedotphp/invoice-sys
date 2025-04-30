@@ -1,0 +1,31 @@
+:root {
+    --blue-50: 146, 119, 255;
+    --blue-100: 124, 93, 250;
+    --black-50: 37, 41, 69;
+    --black-100: 30, 33, 57;
+    --black-200: 20, 22, 37;
+    --black-300: 12, 14, 22;
+    --grey-50: 248, 248, 251;
+    --grey-100: 223, 227, 250;
+    --grey-200: 136, 142, 176;
+    --grey-300: 126, 136, 195;
+    --red-50: 255, 151, 151;
+    --red-100: 236, 87, 87;
+}
+
+@theme {
+    --color-primary: rgba(var(--blue-100));
+    --color-secondary: rgba(var(--black-300));
+    --color-tertiary: rgba(var(--grey-300));
+    --color-quaternary: rgba(var(--grey-200));
+    --color-quinary: rgba(var(--grey-50));
+    --color-senary: rgba(var(--black-100));
+    --color-hover: rgba(var(--grey-100));
+    --color-septenary: rgba(var(--black-200));
+    /* quaternary */
+    /* quinary */
+    /* senary */
+    /* septenary */
+    /* octonary */
+    /* nonary */
+}
