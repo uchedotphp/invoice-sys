@@ -1,10 +1,10 @@
-import Avatar from "./ui/Avatar";
+import Avatar from "@components/ui/Avatar";
 import { TbSettings } from "react-icons/tb";
 import { BiSolidMoon } from "react-icons/bi";
 import { WiStars } from "react-icons/wi";
 import { HiOutlineUser } from "react-icons/hi2";
-import { Button } from "./ui/Button";
-import Logo from "./ui/Logo.tsx";
+import { Button } from "@components/ui/Button";
+import Logo from "@components/ui/Logo.tsx";
 import { ReactNode } from "react";
 
 interface SidebarMenuProps {
@@ -22,7 +22,7 @@ const SidebarMenu = ({ children }: SidebarMenuProps) => {
 export const Sidebar = () => {
   const iconSizes = "22px";
   return (
-    <div className="w-full lg:w-[103px] lg:h-full bg-senary flex lg:flex-col justify-between lg:rounded-tr-4xl lg:rounded-br-4xl overflow-hidden">
+    <div className="w-full lg:w-[103px] lg:h-full bg-senary flex lg:flex-col justify-between lg:rounded-tr-4xl lg:rounded-br-4xl overflow-hidden z-10">
       <div className="lg:h-28 rounded-tr-4xl rounded-br-4xl overflow-hidden">
         <Logo />
       </div>
