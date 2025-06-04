@@ -112,3 +112,34 @@ export const invoiceData: InvoiceData[] = [
         updatedAt: "2021-08-29T00:00:00Z",
     },
 ];
+
+export const invoiceItems = [
+        {
+            id: 1,
+            itemName: "Item 1",
+            quantity: 2,
+            price: 78.0,
+            total: 156.0,
+        },
+        {
+            id: 2,
+            itemName: "Item 2",
+            quantity: 2,
+            price: 78.0,
+            total: 156.0,
+        },
+        {
+            id: 3,
+            itemName: "Item 3",
+            quantity: 2,
+            price: 78.0,
+            total: 186.0,
+        },
+        {
+            id: 4,
+            itemName: "Item 4",
+            quantity: 2,
+            price: 78.0,
+            total: 156.0,
+        },
+    ];
