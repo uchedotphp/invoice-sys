@@ -4,3 +4,36 @@
     --text-ground: 15px;
     --text-small: 13px;
 }
+
+@layer utilities {
+    .text-small {
+        font-size: var(--text-small);
+        line-height: 18px;
+    }
+
+    .text-small-variant {
+        font-size: var(--text-small);
+        line-height: 15px;
+    }
+
+
+    .text-ground {
+        font-size: var(--text-ground);
+        line-height: calc(var(--text-ground) * 1);
+    }
+
+    .text-ground-variant {
+        font-size: var(--text-small);
+        line-height: 24px;
+    }
+
+    .text-medium {
+        font-size: var(--text-medium);
+        line-height: normal;
+    }
+
+    .text-large {
+        font-size: var(--text-large);
+        line-height: normal;
+    }
+}
