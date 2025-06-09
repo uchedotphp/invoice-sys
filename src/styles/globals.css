@@ -1,6 +1,5 @@
 /* Import League Spartan from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
-
 @import "tailwindcss";
 @import "./colors.css";
 @import "./typography.css";
@@ -13,7 +12,7 @@
 
   html,
   body {
-    @apply w-full h-full overflow-x-hidden font-league;
+    @apply w-full h-full overflow-hidden font-league;
     font-size: var(--text-ground);
     line-height: 1;
   }
@@ -25,7 +24,98 @@
   ::selection {
     @apply bg-primary/20;
   }
+}
 
+@layer components {
+
+  /* buttons */
+  .btn {
+    @apply pt-3.5 pl-[18px] pb-[11px] pr-[19px] inline-flex items-center justify-center rounded-md font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn--primary {
+    @apply text-white bg-primary hover:bg-primary/70;
+  }
+
+  .btn--flat {
+    @apply bg-transparent p-0 rounded-none h-fit;
+  }
+
+
+  .btn--rounded {
+    @apply rounded-full;
+  }
+
+  /* end of buttons */
+
+  /* Invoice status */
+
+  .invoice-status {
+    @apply w-full truncate;
+    max-width: 104px;
+  }
+
+  .invoice-status--draft {
+    @apply text-draft bg-draft/10;
+
+    .dot {
+      @apply bg-draft;
+    }
+  }
+
+  .invoice-status--pending {
+    @apply bg-pending/10 text-pending;
+
+    .dot {
+      @apply bg-pending;
+    }
+  }
+
+  .invoice-status--paid {
+    @apply bg-paid/10 text-paid;
+
+    .dot {
+      @apply bg-paid;
+    }
+  }
+
+  .invoice-status--canceled {
+    @apply bg-red-600 text-white;
+
+    .dot {
+      @apply bg-white;
+    }
+  }
+
+  .invoice-status--overdue {
+    @apply bg-red-600 text-white;
+
+    .dot {
+      @apply bg-white;
+    }
+  }
+
+  /* end of invoice status */
+
+  /* input text field */
+  .input-text-field {
+    @apply w-full border rounded-sm px-5 pt-[18px] pb-[15px] border-gray-100 text-black-300 focus:outline-none focus:border-primary caret-primary placeholder:font-thin font-bold disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .input-text-field--state-error {
+    @apply border-red-100 focus:border-red-100;
+  }
+
+  .input--error {
+    @apply border-red-100 focus:border-red-100;
+  }
+
+  /* end of input text field */
+}
+
+@layer utilities {}
+
+@layer base {
   h1 {
     @apply text-medium lg:text-large;
     font-size: var(--text-large);
@@ -47,61 +137,27 @@
     line-height: 15px;
   }
 
-  /* h6 {
-    font-size: 13px;
-    line-height: 18px;
-  } */
-
   p.description {
     font-size: 13px;
     line-height: 15px;
   }
-}
 
-@layer components {
-  .btn {
-    @apply pt-3.5 pl-[18px] pb-[11px] pr-[19px] inline-flex items-center justify-center rounded-md font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none;
+  label,
+  th {
+    @apply text-ground text-tertiary;
+    line-height: 15px;
   }
 
-  .btn--flat {
-    @apply bg-transparent p-0 rounded-none h-fit;
+  .label--error {
+    @apply text-red-100;
   }
 
-  .btn--primary {
-    @apply text-white bg-primary;
+  legend {
+    @apply text-ground text-primary font-semibold capitalize;
+    line-height: 15px;
   }
 
-  .btn--rounded {
-    @apply rounded-full;
+  .legend--large {
+    @apply text-[#777F98] text-lg font-bold leading-8;
   }
-
-  /* .btn-primary {
-      @apply bg-primary-600 hover:bg-primary-700 text-white;
-    } */
-
-  /* .btn-secondary {
-    @apply btn bg-secondary-600 hover:bg-secondary-700 text-white;
-  } */
-
-  /* .btn-secondary {
-      @apply bg-secondary-600 hover:bg-secondary-700 text-white;
-    } */
-
-  /* .btn-outline {
-    @apply btn border border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800;
-  } */
-
-  /* .btn-outline {
-      @apply border border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800;
-    } */
-
-  /* .card {
-    @apply rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900;
-  } */
-
-  /* .input {
-    @apply flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm 
-           placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 
-           disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700;
-  } */
 }
