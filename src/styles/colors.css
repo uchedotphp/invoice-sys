@@ -11,9 +11,24 @@
     --grey-300: 126, 136, 195;
     --red-50: 255, 151, 151;
     --red-100: 236, 87, 87;
+
+    /* states */
+    --paid: #33D69F;
+    --pending: #FF8F00;
+    --draft: #373B53;
 }
 
 @theme {
+    --color-blue-50: rgba(var(--blue-50))
+    --color-blue-100: rgba(var(--blue-100))
+    --color-black-50: rgba(var(--black-50));
+    --color-black-100: rgba(var(--black-100));
+    --color-black-200: rgba(var(--black-200));
+    --color-black-300: rgba(var(--black-300));
+    --color-gray-50: rgba(var(--grey-50));
+    --color-gray-100: rgba(var(--grey-100));
+    --color-gray-200: rgba(var(--grey-200));
+    --color-gray-300: rgba(var(--grey-300));
     --color-primary: rgba(var(--blue-100));
     --color-secondary: rgba(var(--black-300));
     --color-tertiary: rgba(var(--grey-300));
@@ -22,6 +37,13 @@
     --color-senary: rgba(var(--black-100));
     --color-hover: rgba(var(--grey-100));
     --color-septenary: rgba(var(--black-200));
+    --color-paid: var(--paid);
+    --color-pending: var(--pending);
+    --color-draft: var(--draft);
+    --color-red-50: rgba(var(--red-50));
+    --color-red-100: rgba(var(--red-100));
+    --color-black-300: rgba(var(--black-300));
+    --shadow-md: 0px 10px 10px -10px rgba(72, 84, 159, 0.1004);
     /* quaternary */
     /* quinary */
     /* senary */
